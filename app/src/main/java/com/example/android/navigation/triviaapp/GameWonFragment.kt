@@ -56,7 +56,7 @@ class GameWonFragment : Fragment() {
     }
 
     private fun getShareIntent(): Intent {
-        var args = GameWonFragmentArgs.fromBundle(arguments)
+        var args = GameWonFragmentArgs.fromBundle(arguments!!)
         /*val shareIntent = Intent(Intent.ACTION_SEND)
 
         shareIntent.setType("text/plain")

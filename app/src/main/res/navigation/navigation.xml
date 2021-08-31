@@ -5,14 +5,19 @@
             app:startDestination="@id/titleFragment">
     <fragment android:id="@+id/titleFragment" android:name="com.example.android.navigation.TitleFragment"
               android:label="fragment_title" tools:layout="@layout/fragment_title">
-        <action android:id="@+id/action_titleFragment_to_gameFragment" app:destination="@id/gameFragment"/>
+        <action android:id="@+id/action_titleFragment_to_gameFragment" app:destination="@id/gameFragment"
+        />
     </fragment>
     <fragment android:id="@+id/gameFragment" android:name="com.example.android.navigation.GameFragment"
               android:label="fragment_game" tools:layout="@layout/fragment_game">
         <action android:id="@+id/action_gameFragment_to_gameOverFragment2" app:destination="@id/gameOverFragment2"
-                app:popUpTo="@id/gameFragment" app:popUpToInclusive="true"/>
+                app:popUpTo="@id/gameFragment" app:popUpToInclusive="true" app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out" app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_in_right"/>
         <action android:id="@+id/action_gameFragment_to_gameWonFragment" app:destination="@id/gameWonFragment"
-                app:popUpTo="@id/gameFragment" app:popUpToInclusive="true"/>
+                app:popUpTo="@id/gameFragment" app:popUpToInclusive="true" app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out" app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_in_right"/>
     </fragment>
     <fragment android:id="@+id/gameOverFragment2" android:name="com.example.android.navigation.GameOverFragment"
               android:label="fragment_game_over" tools:layout="@layout/fragment_game_over">
@@ -28,4 +33,6 @@
     </fragment>
     <fragment android:id="@+id/aboutFragment" android:name="com.example.android.navigation.AboutFragment"
               android:label="fragment_about_trivia" tools:layout="@layout/fragment_about"/>
+    <fragment android:id="@+id/rulesFragment" android:name="com.example.android.navigation.RulesFragment"
+              android:label="fragment_rules" tools:layout="@layout/fragment_rules"/>
 </navigation>
